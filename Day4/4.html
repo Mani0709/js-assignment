@@ -1,0 +1,41 @@
+<html>
+<head>
+<h1>Calculator</h1>
+</head>
+<body>
+<script>
+let a=Number(prompt("Enter first Number: "));
+let b;
+let ch=prompt("Enter operations(+,-,*,/,square root,percentage): ");
+switch(ch)
+{
+	case "+":   b=Number(prompt("Enter Second Number: "));
+		console.log(a+b);
+		break;
+	case "-":    b=Number(prompt("Enter Second Number: "));
+		console.log(a-b);
+		break;
+	case "*":   b=Number(prompt("Enter Second Number: "));
+		console.log(a*b);
+		break;
+	case "/":   b=Number(prompt("Enter Second Number: "));
+		if(b!=0)
+		{
+			console.log(a/b);
+		}
+		else
+		{
+			console.log("Cannot divide by 0");
+		}
+		break;
+	case "perc":b=Number(prompt("Enter Second Number: "));
+		 let c=(a/b)*100;
+		console.log(c.toFixed(2));
+		break;
+	case "sqrt": console.log(Math.sqrt(a));
+		break;
+	default: console.log("Invalid choice of operation");
+}		
+</script>
+</body>
+</html>
